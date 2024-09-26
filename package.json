@@ -3,7 +3,7 @@
   "description": "A tool to analyse the HTML version of an email message in `.eml` files.",
   "type": "module",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": ["eml"],
   "license": "MIT",
   "engines": {
