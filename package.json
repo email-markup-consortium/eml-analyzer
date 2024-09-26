@@ -6,6 +6,9 @@
   "version": "1.0.0",
   "keywords": ["eml"],
   "license": "MIT",
+  "engines": {
+    "node": ">=18.17"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "emoji-regex": "^10.3.0",
@@ -15,5 +18,9 @@
     "postcss": "^8.4.38",
     "tld-extract": "^2.1.0",
     "url-file-size": "^1.0.5-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/email-markup-consortium/eml-analyzer.git"
   }
 }
