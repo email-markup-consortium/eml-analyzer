@@ -1,0 +1,15 @@
+{
+  "name": "eml-analyzer",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "emoji-regex": "^10.3.0",
+    "extract-urls": "^1.4.1",
+    "franc": "^6.2.0",
+    "letterparser": "^0.1.5",
+    "postcss": "^8.4.38",
+    "tld-extract": "^2.1.0",
+    "url-file-size": "^1.0.5-1"
+  }
+}
