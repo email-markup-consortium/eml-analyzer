@@ -1,7 +1,11 @@
 {
   "name": "eml-analyzer",
+  "description": "A tool to analyse the HTML version of an email message in `.eml` files.",
   "type": "module",
   "main": "index.js",
+  "version": "1.0.0",
+  "keywords": ["eml"],
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "emoji-regex": "^10.3.0",
