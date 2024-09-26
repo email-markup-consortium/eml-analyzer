@@ -3,6 +3,13 @@
 A tool to analyse the HTML version of an email message in `.eml` files.
 
 
+## Install
+
+```
+npm i eml-analyzer
+```
+
+
 ## Usage
 
 ```js
