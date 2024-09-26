@@ -6,6 +6,9 @@ A tool to analyse the HTML version of an email message in `.eml` files.
 ## Usage
 
 ```js
+import * as fs from "fs";
+import emlAnalyzer from "eml-analyzer";
+
 let analyzer = new emlAnalyzer("path/to/file.eml");
 
 analyzer.run().then(() => {
