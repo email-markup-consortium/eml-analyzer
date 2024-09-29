@@ -47,7 +47,10 @@ let analyzer = new emlAnalyzer("path/to/file.eml", {
 
 The returned results include:
 
-- Mime Types
+- Size (in bytes)
+  - of the .eml file
+  - of each MIME type
+- MIME Types
 - Subject line
   - Character count
   - Word count
@@ -75,11 +78,17 @@ The returned results include:
 - External assets
   - Image count
   - File formats
-  - Optional: file sizes of external assets
+  - Optional: file sizes of external assets (in bytes)
 
 
 ```json
 {
+  "size": {
+    "eml": 111062,
+    "text": 4059,
+    "html": 96074,
+    "amp": 0
+  },
   "mimeTypes": {
     "text": true,
     "html": true,

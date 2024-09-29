@@ -98,6 +98,15 @@ export default class emlAnalyzer {
     };
   }
 
+  get size() {
+    return {
+      eml: fs.statSync(this.filePath).size,
+      text: (this.eml.text && this.eml.text.length) ? Buffer.byteLength(this.eml.text, 'utf8') : 0,
+      html: (this.eml.html && this.eml.html.length) ? Buffer.byteLength(this.eml.html, 'utf8') : 0,
+      amp: (this.eml.amp && this.eml.amp.length) ? Buffer.byteLength(this.eml.amp, 'utf8') : 0,
+    };
+  }
+
 
   get subject() {
     if(this.eml.subject) {
@@ -348,6 +357,7 @@ export default class emlAnalyzer {
 
   get result() {
     return {
+      size: this.size,
       mimeTypes: this.mime,
       subject: this.subject,
       sender: this.sender,
