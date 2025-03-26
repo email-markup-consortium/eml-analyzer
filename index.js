@@ -504,11 +504,11 @@ export default class emlAnalyzer {
     if(tag.name == 'script') {
       const type = tag.attributes.find(e => e.name == 'type')?.value;
 
-      if(type === 'application/ld+json' && tag.children[0].data.includes('schema.org')) {
+      if(type === 'application/ld+json' && tag.children?.[0]?.data?.includes('schema.org')) {
         this.hasHtmlStructuredData = true;
       }
 
-      if(type === 'application/adaptivecard+json' && tag.children[0].data.includes('AdaptiveCard')) {
+      if(type === 'application/adaptivecard+json' && tag.children?.[0]?.data?.includes('AdaptiveCard')) {
         this.hasHtmlMicrosoftActionableMessage = true;
       }
     }
