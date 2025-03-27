@@ -127,21 +127,25 @@ export default class emlAnalyzer {
 
   get sender() {
     if(this.eml.from?.address) {
-      let domain = extractTlds(`https://${this.eml.from.address.split('@').pop()}`);
+      try {
+        let domain = extractTlds(`https://${this.eml.from.address.split('@').pop()}`);
 
-      return {
-        tld: domain.tld,
-        subdomain: domain.sub,
-        government: /\bgov\b/i.test(domain.tld),
-        education: /\bedu\b/i.test(domain.tld),
-      };
-    } else {
-      return {
-        tld: false,
-        subdomain: false,
-        government: false,
-        education: false,
+        return {
+          tld: domain.tld,
+          subdomain: domain.sub,
+          government: /\bgov\b/i.test(domain.tld),
+          education: /\bedu\b/i.test(domain.tld),
+        };
+      } catch (err) {
+        console.error(err);
       }
+    }
+
+    return {
+      tld: false,
+      subdomain: false,
+      government: false,
+      education: false,
     }
   }
 
