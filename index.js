@@ -131,6 +131,7 @@ export default class emlAnalyzer {
         let domain = extractTlds(`https://${this.eml.from.address.split('@').pop()}`);
 
         return {
+          domain: domain.domain,
           tld: domain.tld,
           subdomain: domain.sub,
           government: /\bgov\b/i.test(domain.tld),
